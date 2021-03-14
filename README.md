@@ -22,5 +22,5 @@
  ]
 }
 
-#### Feito isso, inicialize o JSON-SERVER: json-server --watch caminho-do-seu-arquivo-json-criado --port 3000
-#### Para finalizar, inicie a aplicação com: npm start ou yarn start
+#### Feito isso, inicialize o JSON-SERVER: ##### json-server --watch caminho-do-seu-arquivo-json-criado --port 3000
+#### Para finalizar, inicie a aplicação com: ##### npm start ou yarn start

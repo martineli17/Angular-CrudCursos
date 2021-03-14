@@ -1,10 +1,10 @@
 # Aplicação desenvolvida em Angular para realização de um CRUD para cursos
 
-## Necessário
+## Necessário(caso ainda não tenha instalado na sua máquina)
 #### Download: https://nodejs.org/en/download/ - Node
 #### Download: https://www.npmjs.com/package/json-server - Json-Server (para simular o back-end)
 
-#### Após realizar os downloads acima (caso ainda não tenha instalado na sua máquina), crie um arquivo .JSON para simular dados dos cursos.
+#### Após realizar os downloads acima, crie um arquivo .JSON para simular dados dos cursos.
 #### Exemplo de estrutura: 
 {
   "courses": [

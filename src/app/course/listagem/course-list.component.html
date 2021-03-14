@@ -1,0 +1,47 @@
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-3">
+            <h4 class="mb-4"> Lista de Cursos</h4>
+        </div>
+        <div class="col-md-2">
+            <button class="btn btn-success mr-2" [routerLink]="['/course/new']">Adicionar</button>
+        </div>
+    </div>
+    <div class="row mb-2">
+        <div class="col-md-12">
+            <input placeholder="Digite o nome de um curso"
+                class="form-control" 
+                [(ngModel)]="filter" 
+                (blur)="SearchCourses()"
+                id="nome-curso"/>
+        </div>
+    </div>
+    
+    <table class="table table-striped">
+        <thead>
+            <th>#</th>
+            <th>Código</th>
+            <th>Nome</th>
+            <th>Valor</th>
+            <th>Data</th>
+            <th>Duração</th>
+            <th>Avaliação</th>
+            <th></th>
+            <th></th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let course of courses">
+                <td>{{course.id}}</td>
+                <td>{{course.code | lowercase | replace: '-' : '/'}}</td>
+                <td>{{course.name}}</td>
+                <td>{{course.price}}</td>
+                <td>{{course.releaseDate | date: 'dd/MM/yyyy'}}</td>
+                <td>{{course.duration}}</td>
+                <td><app-star [rating]="course.rating"></app-star></td>
+                <td><a [routerLink]="['/course', course.id]" class="btn btn-secondary">Detalhes</a></td>
+                <td><a (click)="Delete(course.id)" class="btn btn-danger"><i class="fa fa-trash red"></i></a></td>
+                <!-- <td><a [routerLink]="['/courses-info', course.id]" [queryParams]="{ code: course.code}" class="btn btn-secondary">Detalhes</a></td> -->
+            </tr>
+        </tbody>
+    </table>
+</div>

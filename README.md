@@ -1,27 +1,27 @@
-# Modeulo01
+# Aplicação desenvolvida em Angular para realização de um CRUD para cursos
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.4.
+## Necessário(caso ainda não tenha instalado na sua máquina)
+#### Download: https://nodejs.org/en/download/ - Node
+#### Download: https://www.npmjs.com/package/json-server - Json-Server (para simular o back-end)
 
-## Development server
+#### Após realizar os downloads acima, crie um arquivo .JSON para simular dados dos cursos.
+#### Exemplo de estrutura: 
+{
+  "courses": [
+    {
+      "id": 1,
+      "name": "Angular",
+      "releaseDate": "March 14, 2021",
+      "description": "Aplicação Angular",
+      "duration": 80,
+      "code": "DWQ-3412",
+      "rating": 3.5,
+      "price": 24.99,
+      "imageUrl": ""
+    }
+ ]
+}
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+#### Feito isso, inicialize o JSON-SERVER: json-server --watch caminho-do-seu-arquivo-json-criado --port 3000
+#### Execute, na pasta da aplicação, o comando: npm install
+#### Para finalizar, inicie a aplicação com: npm start

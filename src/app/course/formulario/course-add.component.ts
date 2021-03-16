@@ -71,6 +71,8 @@ export class CourseAddComponent implements OnInit {
         return false;
     };
 
+    ClearErrors = () => this.errors = null;
+
     private CreateFormBuilder = () =>
         this.form = this.formBuilder.group({
             code: [this.course.code, [Validators.required, Validators.minLength(4), Validators.maxLength(7)]],

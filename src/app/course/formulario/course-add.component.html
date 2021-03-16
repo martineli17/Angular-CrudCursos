@@ -5,7 +5,7 @@
         <strong>Atenção!</strong>
         <pre>{{errors}}</pre>
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+            <span aria-hidden="true" (click)="ClearErrors()">&times;</span>
         </button>
     </div>
     <form [formGroup]="form">
@@ -81,80 +81,3 @@
         </div>
     </form>
 </div>
-
-
-<!-- <div class="container mt-4 mb-5">
-    <h4 class="mb-4">Adicionar curso</h4>
-    <hr>
-    <form #courseModel="ngForm">
-        <div class="row form-group">
-            <label class="col-sm-2 col-form-label">Código</label>
-            <div class="col-sm-10">
-                <input [(ngModel)]="course.code" name="code" maxlength="6" class="form-control" required #courseCode="ngModel" 
-                [ngClass]="{'is-invalid':courseCode.invalid}" />
-                <div class="invalid-feedback">
-                    <span>Código inválido</span>
-                </div>
-            </div>
-        </div>
-        <div class="row form-group">
-            <label class="col-sm-2 col-form-label">Nome</label>
-            <div class="col-sm-10">
-                <input [(ngModel)]="course.name" name="name" maxlength="25" class="form-control" required #courseName="ngModel" 
-                [ngClass]="{'is-invalid':courseName.invalid}" />
-                <div class="invalid-feedback">
-                    <span>Nome inválido</span>
-                </div>
-            </div>
-        </div>
-        <div class="row form-group">
-            <label class="col-sm-2 col-form-label">Valor</label>
-            <div class="col-sm-10">
-                <input [(ngModel)]="course.price" name="price" class="form-control" type="number" min="0" max="200" required #coursePrice="ngModel" 
-                    [ngClass]="{'is-invalid':coursePrice.invalid}" />
-                    <div class="invalid-feedback">
-                        <span>Valor inválido</span>
-                    </div>
-            </div>
-           
-        </div>
-        <div class="row form-group">
-            <label class="col-sm-2 col-form-label">Avaliação</label>
-            <div class="col-sm-10">
-                <input [(ngModel)]="course.rating" type="number" name="rating" class="form-control" min="0" max="5" required #courseRating="ngModel" 
-                    [ngClass]="{'is-invalid':courseRating.invalid || course.rating > 5 || course.rating < 0}" />
-                    <div class="invalid-feedback">
-                        <span>Avaliação inválida</span>
-                    </div>
-            </div>
-            
-        </div>
-        <div class="row form-group">
-            <label class="col-sm-2 col-form-label">Duração</label>
-            <div class="col-sm-10">
-                <input [(ngModel)]="course.duration" type="number" name="duration" class="form-control" required #courseDuration="ngModel" 
-                    [ngClass]="{'is-invalid':courseDuration.invalid}" />
-                    <div class="invalid-feedback">
-                        <span>Duração inválida</span>
-                    </div>
-            </div>
-            
-        </div>
-        <div class="row form-group">
-            <label class="col-sm-2 col-form-label">Nome</label>
-            <div class="col-sm-10">
-                <textarea [(ngModel)]="course.description" name="description" class="form-control" maxlength="250" required #courseDescription="ngModel" 
-                    [ngClass]="{'is-invalid':courseDescription.invalid}"></textarea>
-                    <div class="invalid-feedback">
-                        <span>Descrição inválida</span>
-                    </div>
-            </div>
-            
-        </div>
-        <div class="row justify-content-center ">
-            <button class="btn btn-success col-sm-1 mr-2 mt-2" (click)="Add()"  
-            [disabled]="courseModel.invalid || course.rating > 5 || course.rating < 0">Salvar</button>
-            <button class="btn btn-secondary col-sm-1 mr-2 mt-2" [routerLink]="['/courses']">Cancelar</button>
-        </div>
-    </form>
-</div> -->
